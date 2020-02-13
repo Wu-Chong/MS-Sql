@@ -33,6 +33,21 @@ let executeQuery = function (res, query, next) {
   });
 }
 
+router.get('/', function(req, res, next) {
+    sql.connect(config, err => {
+    // ... error check
+    if(err) console.log(err);
+    // Query
+    let sqlRequest = new sql.Request();
+    sqlRequest.query(`select * from dbo.[cr-unit-attributes]`, (err, result) => {
+        // ... error checks
+        if (err) console.log(err);
+        console.log(result.recordsets);
+        //res.send(result)
+        res.render('users', result);
+    });
+  });
+});
 
 router.get('/search/:name', function(req, res, next) {
   sql.connect(config, err => {
@@ -50,7 +65,7 @@ router.get('/search/:name', function(req, res, next) {
 });
 
 
-router.post('/', function (req, res, next) {
+router.post('/insert', function (req, res, next) {
   // Add a new Unit  
   let unit = req.body;
   if (!unit) {  //Qui dovremmo testare tutti i campi della richiesta
