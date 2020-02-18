@@ -2,8 +2,8 @@ extends layout
 
 block content
   each unit in recordset
-   li  Nome: #{unit.Unit}
+   li.ciao  Nome: #{unit.Unit}
     br
-    a(href=``) More Info
+    a(href=`/profile/{unit.unit}`) More Info
     br
     br

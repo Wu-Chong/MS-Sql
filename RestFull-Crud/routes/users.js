@@ -79,4 +79,20 @@ router.post('/insert', function (req, res, next) {
 });
 
 
+router.get('/profile/:unit_name', function(req, res, next) {
+  sql.connect(config, err => {
+    // ... error check
+    if(err) console.log(err);
+    // Query
+    let sqlRequest = new sql.Request();
+    sqlRequest.query(`select * from dbo.[cr-unit-attributes] where Unit = '${req.params.unit_name}'`, (err, result) => {
+        // ... error checks
+        if (err) console.log(err);
+        console.log(result);
+        res.render('profile', result);
+    });
+  });
+
+});
+
 module.exports = router;
