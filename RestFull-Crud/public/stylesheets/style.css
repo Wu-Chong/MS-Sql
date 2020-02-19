@@ -1,38 +1,60 @@
 body {
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
-
-
-ul {
+.ul {
+  box-shadow: 0 0 10px #D3D3D3;
+  border-radius: 10px;
   list-style-type: none;
-  margin: 0;
+  margin: 10px;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #ffffff;
+}
+
+.ul1{
+  list-style-type: none;
 }
 
 .ciao{
-    margin-left: 10px;
-    margin-top: 10px;
-}
-.li1 {
-  float: left;
+    float: left;
+
 }
 
-.li1 a {
+.ciao a{
+    text-decoration: none;
+}
+
+.li1 {
+  float: left;
+  background-color: white;
+}
+
+.li1 a{
   display: block;
-  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
+.li1 a:hover{
+ text-decoration: none;
+}
+
+.ciao a:hover{
+ text-decoration: none;
+}
+
+.img1{
+    width: 150px;
+}
+
+img{
+    background-color: 
+}
+
+.h1{
+    margin-left: 20px;
+    margin-top: 20px;
 }

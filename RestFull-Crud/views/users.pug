@@ -1,9 +1,11 @@
 extends layout
 
 block content
-  each unit in recordset
-   li.ciao  Nome: #{unit.Unit}
-    br
-    a(href=`/profile/{unit.unit}`) More Info
-    br
-    br
+  each unit in array
+   ul.ul1
+    li.ciao
+      a(href=`/users/profile/${unit.Unit}`)
+       img.img1(src=`/images/${unit.Unit}.png` alt=`${unit.Unit}`)
+       br 
+      a(href=`/users/profile/${unit.Unit}`) 
+       p.text-center.p1 #{unit.Unit}
