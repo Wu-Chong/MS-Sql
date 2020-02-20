@@ -1,13 +1,26 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  background-color: #fffeef;
+}
+
+*{
+    background-color: #fffeef;
+}
+
+.head{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+  padding: 10px;
 }
 
 .ul {
+  
   box-shadow: 0 0 10px #D3D3D3;
   border-radius: 10px;
   list-style-type: none;
-  margin: 10px;
+  
   padding: 0;
   overflow: hidden;
   background-color: #ffffff;
@@ -19,7 +32,6 @@ body {
 
 .ciao{
     float: left;
-
 }
 
 .ciao a{
@@ -50,11 +62,18 @@ body {
     width: 150px;
 }
 
-img{
-    background-color: 
+.img2{
+    width: 300px;
+    float: left;
 }
 
 .h1{
-    margin-left: 20px;
-    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
 }
+
+.p2{
+    padding: 20px;
+}
+
+

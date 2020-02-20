@@ -1,5 +1,7 @@
 extends layout
 
 block content
+   img.img2(src=`/images/${array[0].Unit}.png` alt=`${array[0].Unit}`)
    h1.h1 #{array[0].Unit}
-   img(src=`/images/${array[0].Unit}.png` alt=`${array[0].Unit}`)
+   p Costo: #{array[0].Cost}
+   p Velocità d'attacco: #{array[0].Speed}
